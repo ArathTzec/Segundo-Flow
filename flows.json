@@ -1,0 +1,75 @@
+[
+    {
+        "id": "60d94b8b6f2124c5",
+        "type": "tab",
+        "label": "Segundo Flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "09e64e56cd116198",
+        "type": "inject",
+        "z": "60d94b8b6f2124c5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "15",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "d4f62c2b28eb8e4c"
+            ]
+        ]
+    },
+    {
+        "id": "d4f62c2b28eb8e4c",
+        "type": "function",
+        "z": "60d94b8b6f2124c5",
+        "name": "function 1",
+        "func": "// Lo que está después de “//” son comentarios\n// Crea un objeto Date a partir del payload enviado por timestamp\nvar date = new Date(msg.payload);\n// Cambia el payload para que sea una fecha con formato\nmsg.payload = date.toString();\n// Regresa el mensaje para que se envíe al sigueinte nodo\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "137b40f624c48f70"
+            ]
+        ]
+    },
+    {
+        "id": "137b40f624c48f70",
+        "type": "debug",
+        "z": "60d94b8b6f2124c5",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 260,
+        "wires": []
+    }
+]

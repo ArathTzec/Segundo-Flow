@@ -34,3 +34,5 @@ Si corres tu programa dando clic en Deploy; verás que cada 15 segundos da la fe
 
 ## Resultados
 Una vez completados los pasos anteriores se deberá ver una ventana que cada segundo se estará actualizando, como se ve en [Pantalla_Node-Red.png](https://github.com/ArathTzec/Segundo-Flow/blob/main/Pantalla_Node-Red.png)
+
+![](https://github.com/ArathTzec/Segundo-Flow/blob/main/Pantalla_Node-Red.png?raw=true)
